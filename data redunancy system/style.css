@@ -1,0 +1,201 @@
+/* ------------------------------
+   General
+------------------------------ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+header{
+    background:#1f4e79;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+header h1{
+    font-size:28px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* ------------------------------
+   Container
+------------------------------ */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:30px auto;
+}
+
+/* ------------------------------
+   Form
+------------------------------ */
+
+form{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 20px;
+    border:none;
+    border-radius:6px;
+    background:#1f4e79;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#163b5d;
+}
+
+/* ------------------------------
+   Table
+------------------------------ */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    margin-top:20px;
+}
+
+table th{
+    background:#1f4e79;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+table tr:hover{
+    background:#eef5ff;
+}
+
+/* ------------------------------
+   Delete Button
+------------------------------ */
+
+.delete{
+    background:#dc3545;
+    color:white;
+    padding:8px 12px;
+    border-radius:5px;
+    text-decoration:none;
+}
+
+.delete:hover{
+    background:#b52b39;
+}
+
+/* ------------------------------
+   Alerts
+------------------------------ */
+
+.alert{
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.success{
+    background:#d4edda;
+    color:#155724;
+}
+
+.danger{
+    background:#f8d7da;
+    color:#721c24;
+}
+
+.warning{
+    background:#fff3cd;
+    color:#856404;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+footer{
+    margin-top:40px;
+    background:#1f4e79;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    text-align:center;
+}
+
+nav{
+    margin-top:15px;
+}
+
+table{
+    display:block;
+    overflow-x:auto;
+}
+
+}

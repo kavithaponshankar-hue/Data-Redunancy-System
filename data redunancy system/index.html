@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Stored Records</h2>
+
+<form action="/search" method="POST">
+
+<input
+type="text"
+name="keyword"
+placeholder="Search by Name, Email or Phone"
+required>
+
+<button type="submit">
+Search
+</button>
+
+</form>
+
+<br>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Phone</th>
+
+<th>Created</th>
+
+<th>Action</th>
+
+</tr>
+
+{% for user in users %}
+
+<tr>
+
+<td>{{ user.id }}</td>
+
+<td>{{ user.name }}</td>
+
+<td>{{ user.email }}</td>
+
+<td>{{ user.phone }}</td>
+
+<td>{{ user.created_at }}</td>
+
+<td>
+
+<a
+class="delete"
+href="/delete/{{ user.id }}"
+onclick="return confirmDelete()">
+
+Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% if users|length == 0 %}
+
+<h3>No Records Available</h3>
+
+{% endif %}
+
+{% endblock %}
