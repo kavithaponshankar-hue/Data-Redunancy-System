@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Search Results</h2>
+
+<a href="/">← Back to Home</a>
+
+<br><br>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Phone</th>
+
+<th>Created</th>
+
+</tr>
+
+{% for user in users %}
+
+<tr>
+
+<td>{{ user.id }}</td>
+
+<td>{{ user.name }}</td>
+
+<td>{{ user.email }}</td>
+
+<td>{{ user.phone }}</td>
+
+<td>{{ user.created_at }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% if users|length == 0 %}
+
+<h3>No Matching Records Found</h3>
+
+{% endif %}
+
+{% endblock %}
